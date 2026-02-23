@@ -44,7 +44,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
                     <ArrowUpRight size={18} />
                 </div>
                 <span className="font-bold text-lg text-text-primary tracking-tight leading-none uppercase">
-                    {portfolioData.personal.name.toLowerCase()}.is-dev
+                    {portfolioData.personal.name.toLowerCase().split(" ")[0]}.dev
                 </span>
             </div>
 

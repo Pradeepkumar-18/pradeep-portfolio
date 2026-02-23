@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Search, Clock, Music2, Sun, Moon, Github, Command } from 'lucide-react';
+import { Search, Clock, Sun, Moon, Github, Command } from 'lucide-react';
 
 interface TopbarProps {
     theme: 'light' | 'dark';
@@ -45,7 +45,6 @@ const Topbar: React.FC<TopbarProps> = ({ theme, toggleTheme }) => {
                 </div>
 
                 <div className="flex items-center gap-4 text-text-muted">
-                    <Music2 size={18} className="hover:text-text-primary cursor-pointer transition-colors" />
                     <button
                         onClick={toggleTheme}
                         className="p-2 rounded-lg hover:bg-input-bg transition-colors"

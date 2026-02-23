@@ -75,7 +75,7 @@
 
 @layer components {
     .dashboard-section {
-        @apply min-h-screen py-24 flex flex-col justify-center items-center text-center;
+        @apply py-8 flex flex-col justify-center items-center text-center;
     }
 
     .nav-item-active {

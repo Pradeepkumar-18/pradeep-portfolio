@@ -21,6 +21,11 @@ function App() {
     }
   }, [theme]);
 
+  // Reset scroll position on tab change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [activeTab]);
+
   const toggleTheme = () => {
     setTheme(prev => {
       const newTheme = prev === 'light' ? 'dark' : 'light';
