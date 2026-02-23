@@ -1,1 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+
 @import "tailwindcss";
+
+:root {
+    --background: #FFFFFF;
+    --sidebar: #F9FAFB;
+    --card: #FFFFFF;
+    --border: #E5E7EB;
+    --text-primary: #111827;
+    --text-secondary: #4B5563;
+    --text-muted: #9CA3AF;
+    --input-bg: #F3F4F6;
+}
+
+.dark {
+    --background: #09090B;
+    --sidebar: #09090B;
+    --card: #121214;
+    --border: #1E1E20;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A1A1AA;
+    --text-muted: #71717A;
+    --input-bg: #18181B;
+}
+
+@theme {
+    --font-sans: "Geist", "Public Sans", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Geist", "Public Sans", sans-serif;
+
+    --color-primary: #A855F7;
+    --color-primary-dark: #7E22CE;
+
+    --color-background: var(--background);
+    --color-sidebar: var(--sidebar);
+    --color-card: var(--card);
+    --color-border: var(--border);
+
+    --color-text-primary: var(--text-primary);
+    --color-text-secondary: var(--text-secondary);
+    --color-text-muted: var(--text-muted);
+    --color-input-bg: var(--input-bg);
+
+    --spacing-sidebar: 260px;
+    --spacing-topbar: 64px;
+}
+
+@layer base {
+    body {
+        @apply bg-background text-text-secondary font-sans antialiased selection:bg-primary/30 selection:text-white overflow-x-hidden transition-colors duration-300;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display font-bold text-text-primary;
+    }
+
+    ::-webkit-scrollbar {
+        @apply w-1.5;
+    }
+
+    ::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        @apply bg-border rounded-full;
+    }
+}
+
+@layer components {
+    .dashboard-section {
+        @apply min-h-screen py-24 flex flex-col justify-center items-center text-center;
+    }
+
+    .nav-item-active {
+        @apply bg-input-bg text-text-primary;
+    }
+
+    .btn-dashboard-primary {
+        @apply bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-bold transition-all flex items-center gap-2;
+    }
+
+    .btn-dashboard-secondary {
+        @apply border border-border hover:bg-text-primary/5 text-text-primary px-6 py-3 rounded-lg font-bold transition-all flex items-center gap-2;
+    }
+
+    .letter-spacing-tight {
+        letter-spacing: -0.04em;
+    }
+
+    .glass-card {
+        @apply bg-card border border-border rounded-2xl backdrop-blur-sm transition-all duration-300;
+    }
+}

@@ -1,14 +1,14 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Github, Linkedin, Mail } from 'lucide-react';
+import { Menu, X, Terminal } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { portfolioData } from '../data/portfolioData';
 
-const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-];
 
-const Navbar = () => {
+interface NavbarProps {
+    setActiveTab: (tab: string) => void;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ setActiveTab }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -20,55 +20,62 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const navLinks = [
+        { name: 'About', id: 'about' },
+        { name: 'Experience', id: 'experience' },
+        { name: 'Skills', id: 'skills' },
+        { name: 'Contact', id: 'contact' },
+    ];
+
+    const handleTabClick = (id: string) => {
+        setActiveTab(id);
+        setIsMobileMenuOpen(false);
+    };
+
     return (
         <>
             <motion.nav
-                className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isScrolled ? 'bg-slate-900/80 backdrop-blur-md border-b border-slate-800' : 'bg-transparent'
+                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b md:left-[260px] ${isScrolled ? 'bg-background-light/80 backdrop-blur-md border-slate-200 py-3' : 'bg-transparent border-transparent py-5'
                     }`}
                 initial={{ y: -100 }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-                    <div className="flex items-center justify-between h-20">
-                        {/* Logo */}
-                        <a href="#" className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-cyan-400">
-                            Pradeep<span className="text-indigo-500">.</span>
-                        </a>
-
-                        {/* Desktop Navigation */}
-                        <div className="hidden md:flex items-center space-x-8">
-                            {navLinks.map((link) => (
-                                <a
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-sm font-medium text-slate-300 hover:text-white transition-colors relative group"
-                                >
-                                    {link.name}
-                                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-indigo-500 transition-all group-hover:w-full" />
-                                </a>
-                            ))}
-
-                            <div className="h-6 w-px bg-slate-700 mx-4" />
-
-                            <div className="flex items-center space-x-4">
-                                <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                                    <Github className="w-5 h-5" />
-                                </a>
-                                <a href="#" className="text-slate-400 hover:text-white transition-colors">
-                                    <Linkedin className="w-5 h-5" />
-                                </a>
-                            </div>
+                <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+                    {/* Logo */}
+                    <button onClick={() => handleTabClick('intro')} className="flex items-center gap-2 group">
+                        <div className="size-8 bg-primary rounded flex items-center justify-center text-white">
+                            <Terminal size={20} />
                         </div>
+                        <span className="font-bold tracking-tight text-lg uppercase text-slate-900">
+                            {portfolioData.personal.name} {portfolioData.personal.surname}
+                        </span>
+                    </button>
 
-                        {/* Mobile Menu Button */}
-                        <button
-                            className="md:hidden text-slate-300 hover:text-white"
-                            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        >
-                            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    {/* Desktop Navigation */}
+                    <div className="hidden md:flex items-center gap-8">
+                        {navLinks.map((link) => (
+                            <button
+                                key={link.name}
+                                onClick={() => handleTabClick(link.id)}
+                                className="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                            >
+                                {link.name}
+                            </button>
+                        ))}
+
+                        <button onClick={() => handleTabClick('contact')} className="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-lg transition-all font-bold text-sm">
+                            Hire Me
                         </button>
                     </div>
+
+                    {/* Mobile Menu Button */}
+                    <button
+                        className="md:hidden text-slate-900"
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    >
+                        {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                    </button>
                 </div>
             </motion.nav>
 
@@ -76,34 +83,27 @@ const Navbar = () => {
             <AnimatePresence>
                 {isMobileMenuOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20 }}
+                        initial={{ opacity: 0, y: -10 }}
                         animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="fixed inset-0 z-30 bg-slate-900 pt-24 px-4 md:hidden"
+                        exit={{ opacity: 0, y: -10 }}
+                        className="fixed inset-0 z-30 bg-background-light pt-24 px-6 md:hidden"
                     >
-                        <div className="flex flex-col space-y-6">
+                        <div className="flex flex-col space-y-8">
                             {navLinks.map((link) => (
-                                <a
+                                <button
                                     key={link.name}
-                                    href={link.href}
-                                    className="text-2xl font-medium text-slate-300 hover:text-white"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    onClick={() => handleTabClick(link.id)}
+                                    className="text-2xl font-bold text-slate-900 text-left"
                                 >
                                     {link.name}
-                                </a>
+                                </button>
                             ))}
-                            <div className="h-px bg-slate-800 my-6" />
-                            <div className="flex space-x-6 justify-center">
-                                <a href="#" className="text-slate-400 hover:text-white">
-                                    <Github className="w-6 h-6" />
-                                </a>
-                                <a href="#" className="text-slate-400 hover:text-white">
-                                    <Linkedin className="w-6 h-6" />
-                                </a>
-                                <a href="#" className="text-slate-400 hover:text-white">
-                                    <Mail className="w-6 h-6" />
-                                </a>
-                            </div>
+                            <button
+                                onClick={() => handleTabClick('contact')}
+                                className="bg-primary hover:bg-primary/90 text-white w-full text-center py-4 rounded-xl font-bold"
+                            >
+                                Hire Me
+                            </button>
                         </div>
                     </motion.div>
                 )}
