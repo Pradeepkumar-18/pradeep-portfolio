@@ -14,7 +14,7 @@ export const portfolioData = {
             part1: "JUNIOR SOFTWARE DEVELOPER",
         },
         description:
-            "Junior Software Developer at Skillmine Technology with 1 year of experience in building AI-powered document processing and automation systems using React, NestJS, and MongoDB.",
+            "Junior Software Developer at Skillmine Technology with 1 year of experience building scalable full-stack web applications using React, NestJS, and MongoDB. Experienced in developing secure APIs, designing modular system architecture, and integrating AI to build scalable AI-powered enterprise applications and workflow automation platforms.",
         actions: [
             {
                 text: "CHECK LINKEDIN",
