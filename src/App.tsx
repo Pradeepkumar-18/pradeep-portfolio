@@ -14,16 +14,20 @@ function App() {
 
   useEffect(() => {
     // Sync theme class with document element for global CSS variables and Tailwind dark mode
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
+    if (typeof document !== 'undefined') {
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     }
   }, [theme]);
 
   // Reset scroll position on tab change
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
   }, [activeTab]);
 
   const toggleTheme = () => {
