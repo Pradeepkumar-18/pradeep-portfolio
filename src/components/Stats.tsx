@@ -20,30 +20,30 @@ const Stats = () => {
             >
                 <div className="space-y-6">
                     <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">Stats</h2>
-                    <h3 className="text-4xl md:text-5xl font-black text-text-primary leading-tight tracking-tight">System Performance</h3>
+                    <h3 className="text-3xl sm:text-4xl md:text-5xl font-black text-text-primary leading-tight tracking-tight">System Performance</h3>
                 </div>
 
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 w-full">
                     {stats.map((stat, index) => (
                         <motion.div
                             key={index}
-                            className="glass-card p-8 hover:border-primary/30 transition-all group shadow-xl"
+                            className="glass-card p-6 sm:p-8 hover:border-primary/30 transition-all group shadow-xl"
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.1 }}
                         >
-                            <div className={`${stat.color} mb-6 bg-input-bg/50 border border-border size-12 rounded-xl flex items-center justify-center shadow-inner`}>
+                            <div className={`${stat.color} mb-4 sm:mb-6 bg-input-bg/50 border border-border size-10 sm:size-12 rounded-xl flex items-center justify-center shadow-inner`}>
                                 {stat.icon}
                             </div>
-                            <div className="text-3xl font-black text-text-primary mb-2 tracking-tighter">{stat.value}</div>
+                            <div className="text-2xl sm:text-3xl font-black text-text-primary mb-2 tracking-tighter">{stat.value}</div>
                             <div className="text-[10px] font-black uppercase tracking-widest text-text-muted">{stat.label}</div>
                         </motion.div>
                     ))}
                 </div>
 
                 {/* Performance Chart Placeholder */}
-                <div className="glass-card p-10 w-full relative overflow-hidden group shadow-2xl">
+                <div className="glass-card p-6 sm:p-10 w-full relative overflow-hidden group shadow-2xl">
                     <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
                         <Zap size={160} className="text-primary" />
                     </div>

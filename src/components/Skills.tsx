@@ -18,11 +18,11 @@ const Skills = () => {
                     <p className="text-text-secondary text-lg md:text-xl max-w-2xl">A comprehensive overview of my technical capabilities and the specialized tools I utilize to build intelligent systems.</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full max-w-5xl">
                     {portfolioData.skills.map((category, index) => (
                         <motion.div
                             key={index}
-                            className="glass-card p-10 hover:border-primary/40 transition-all group"
+                            className="glass-card p-6 sm:p-10 hover:border-primary/40 transition-all group"
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}

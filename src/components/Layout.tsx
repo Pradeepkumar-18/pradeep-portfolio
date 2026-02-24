@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Sidebar from './Sidebar';
 import Topbar from './Topbar';
@@ -18,20 +19,30 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab, them
         restDelta: 0.001,
     });
 
+    const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
     return (
         <div className="min-h-screen bg-background flex transition-colors duration-300">
             {/* Left Sidebar */}
-            <Sidebar activeTab={activeTab} setActiveTab={setActiveTab} />
+            <Sidebar
+                activeTab={activeTab}
+                setActiveTab={(tab) => {
+                    setActiveTab(tab);
+                    setIsSidebarOpen(false);
+                }}
+                isOpen={isSidebarOpen}
+                onClose={() => setIsSidebarOpen(false)}
+            />
 
             {/* Main Content Area */}
-            <div className="flex-1 md:ml-[260px] flex flex-col min-h-screen relative">
+            <div className="flex-1 flex flex-col min-h-screen relative md:pl-[260px]">
                 {/* Global Scroll Progress */}
                 <motion.div
                     className="fixed top-0 left-0 right-0 h-[2px] bg-primary origin-left z-[60] md:left-[260px]"
                     style={{ scaleX }}
                 />
 
-                <Topbar theme={theme} toggleTheme={toggleTheme} />
+                <Topbar theme={theme} toggleTheme={toggleTheme} onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
 
                 <main className="flex-1 relative">
                     <div className="max-w-6xl mx-auto px-6 md:px-2">

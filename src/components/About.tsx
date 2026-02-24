@@ -28,7 +28,7 @@ const About = () => {
                     </motion.h2>
 
                     <motion.h3
-                        className="text-4xl md:text-6xl lg:text-7xl font-black text-text-primary leading-[0.9] tracking-tighter max-w-4xl mx-auto"
+                        className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-black text-text-primary leading-[1.1] md:leading-[0.9] tracking-tighter max-w-4xl mx-auto"
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.3 }}
@@ -37,7 +37,7 @@ const About = () => {
                     </motion.h3>
 
                     <motion.div
-                        className="space-y-6 text-text-secondary leading-relaxed text-lg md:text-xl max-w-3xl mx-auto opacity-80"
+                        className="space-y-6 text-text-secondary leading-relaxed text-base md:text-xl max-w-3xl mx-auto opacity-80"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
@@ -52,7 +52,7 @@ const About = () => {
 
                 <div className="w-full max-w-3xl mx-auto">
                     <motion.div
-                        className="glass-card p-12 group hover:border-primary/30 transition-all shadow-2xl shadow-text-primary/5 bg-background/40 backdrop-blur-xl"
+                        className="glass-card p-6 sm:p-12 group hover:border-primary/30 transition-all shadow-2xl shadow-text-primary/5 bg-background/40 backdrop-blur-xl"
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}

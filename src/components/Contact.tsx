@@ -14,33 +14,33 @@ const Contact = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => 
             >
                 <div className="text-left space-y-6">
                     <h2 className="text-[11px] font-black uppercase tracking-[0.3em] text-primary">Contact</h2>
-                    <h3 className="text-4xl md:text-6xl font-black text-text-primary leading-tight tracking-tight">
+                    <h3 className="text-3xl sm:text-4xl md:text-6xl font-black text-text-primary leading-tight tracking-tight">
                         Let's build something <span className="text-primary italic">efficient</span>.
                     </h3>
-                    <p className="text-text-secondary text-lg md:text-xl max-w-2xl">
+                    <p className="text-text-secondary text-base md:text-xl max-w-2xl">
                         Currently exploring opportunities to engineer high-performance software systems and intelligent document pipelines.
                     </p>
                 </div>
 
-                <div className="grid lg:grid-cols-2 gap-10 w-full">
-                    <div className="space-y-8 flex flex-col">
-                        <div className="space-y-6">
-                            <a href={`mailto:${portfolioData.contact.email}`} className="glass-card p-8 flex items-center gap-6 group hover:border-primary/40 transition-all shadow-xl">
-                                <div className="size-14 rounded-xl bg-input-bg border border-border flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
-                                    <Mail size={24} />
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 w-full">
+                    <div className="space-y-6 flex flex-col">
+                        <div className="space-y-4 md:space-y-6">
+                            <a href={`mailto:${portfolioData.contact.email}`} className="glass-card p-6 md:p-8 flex items-center gap-4 md:gap-6 group hover:border-primary/40 transition-all shadow-xl">
+                                <div className="size-12 md:size-14 rounded-xl bg-input-bg border border-border flex items-center justify-center text-primary group-hover:scale-110 transition-transform flex-shrink-0">
+                                    <Mail size={22} />
                                 </div>
-                                <div className="text-left space-y-1">
+                                <div className="text-left space-y-1 overflow-hidden">
                                     <div className="text-[10px] font-black text-text-muted uppercase tracking-widest">Email Address</div>
-                                    <div className="font-black text-lg text-text-primary group-hover:text-primary transition-colors">{portfolioData.contact.email}</div>
+                                    <div className="font-black text-base md:text-lg text-text-primary group-hover:text-primary transition-colors truncate">{portfolioData.contact.email}</div>
                                 </div>
                             </a>
-                            <div className="glass-card p-8 flex items-center gap-6 group shadow-xl">
-                                <div className="size-14 rounded-xl bg-input-bg border border-border flex items-center justify-center text-primary">
-                                    <MapPin size={24} />
+                            <div className="glass-card p-6 md:p-8 flex items-center gap-4 md:gap-6 group shadow-xl">
+                                <div className="size-12 md:size-14 rounded-xl bg-input-bg border border-border flex items-center justify-center text-primary flex-shrink-0">
+                                    <MapPin size={22} />
                                 </div>
                                 <div className="text-left space-y-1">
                                     <div className="text-[10px] font-black text-text-muted uppercase tracking-widest">Current Location</div>
-                                    <div className="font-black text-lg text-text-primary">{portfolioData.contact.location}</div>
+                                    <div className="font-black text-base md:text-lg text-text-primary">{portfolioData.contact.location}</div>
                                 </div>
                             </div>
                         </div>

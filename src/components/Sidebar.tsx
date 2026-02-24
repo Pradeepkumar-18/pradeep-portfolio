@@ -1,4 +1,5 @@
-import { LayoutDashboard, User, FolderKanban, Wrench, Briefcase, GraduationCap, Mail, BarChart3, ArrowUpRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { LayoutDashboard, User, FolderKanban, Wrench, Briefcase, GraduationCap, Mail, BarChart3, ArrowUpRight, X } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 interface NavItemProps {
@@ -22,9 +23,11 @@ const NavItem: React.FC<NavItemProps> = ({ id, icon, label, active, onClick }) =
 interface SidebarProps {
     activeTab: string;
     setActiveTab: (tab: string) => void;
+    isOpen: boolean;
+    onClose: () => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
+const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isOpen, onClose }) => {
     const navItems = [
         { href: '#intro', icon: <LayoutDashboard size={18} />, label: "Introduction", id: 'intro' },
         { href: '#about', icon: <User size={18} />, label: "About Me", id: 'about' },
@@ -37,41 +40,61 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab }) => {
     ];
 
     return (
-        <aside className="fixed left-0 top-0 bottom-0 w-[260px] bg-sidebar border-r border-border p-6 flex flex-col gap-8 z-50 overflow-y-auto hidden md:flex transition-colors duration-300">
-            {/* Logo */}
-            <div className="flex items-center gap-3 px-2">
-                <div className="size-8 bg-input-bg border border-border rounded flex items-center justify-center text-text-primary">
-                    <ArrowUpRight size={18} />
-                </div>
-                <span className="font-bold text-lg text-text-primary tracking-tight leading-none uppercase">
-                    {portfolioData.personal.name.toLowerCase().split(" ")[0]}.dev
-                </span>
-            </div>
-
-            {/* Navigation Sections */}
-            <nav className="flex flex-col gap-1">
-                <div className="px-4 mb-4 mt-2">
-                    <h4 className="text-[11px] font-black tracking-[0.2em] text-text-muted uppercase">Sections</h4>
-                </div>
-
-                {navItems.map((item) => (
-                    <NavItem
-                        key={item.id}
-                        id={item.id}
-                        icon={item.icon}
-                        label={item.label}
-                        active={activeTab === item.id}
-                        onClick={setActiveTab}
+        <>
+            {/* Mobile Overlay */}
+            <AnimatePresence>
+                {isOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={onClose}
+                        className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 md:hidden"
                     />
-                ))}
-            </nav>
+                )}
+            </AnimatePresence>
 
-            <div className="mt-auto px-4 py-6 border-t border-border">
-                <p className="text-[10px] text-text-muted leading-relaxed font-medium">
-                    © {new Date().getFullYear()} {portfolioData.personal.name} {portfolioData.personal.surname}. Designed for elite performance.
-                </p>
-            </div>
-        </aside>
+            <aside className={`fixed left-0 top-0 bottom-0 w-[260px] bg-sidebar border-r border-border p-6 flex flex-col gap-8 z-50 overflow-y-auto transition-transform duration-300 md:translate-x-0 ${isOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}`}>
+                {/* Logo & Close Button */}
+                <div className="flex items-center justify-between gap-3 px-2">
+                    <div className="flex items-center gap-3">
+                        <div className="size-8 bg-input-bg border border-border rounded flex items-center justify-center text-text-primary">
+                            <ArrowUpRight size={18} />
+                        </div>
+                        <span className="font-bold text-lg text-text-primary tracking-tight leading-none uppercase">
+                            {portfolioData.personal.name.toLowerCase().split(" ")[0]}.dev
+                        </span>
+                    </div>
+                    <button onClick={onClose} className="p-2 -mr-2 text-text-muted hover:text-text-primary md:hidden">
+                        <X size={20} />
+                    </button>
+                </div>
+
+                {/* Navigation Sections */}
+                <nav className="flex flex-col gap-1">
+                    <div className="px-4 mb-4 mt-2">
+                        <h4 className="text-[11px] font-black tracking-[0.2em] text-text-muted uppercase">Sections</h4>
+                    </div>
+
+                    {navItems.map((item) => (
+                        <NavItem
+                            key={item.id}
+                            id={item.id}
+                            icon={item.icon}
+                            label={item.label}
+                            active={activeTab === item.id}
+                            onClick={setActiveTab}
+                        />
+                    ))}
+                </nav>
+
+                <div className="mt-auto px-4 py-6 border-t border-border">
+                    <p className="text-[10px] text-text-muted leading-relaxed font-medium">
+                        © {new Date().getFullYear()} {portfolioData.personal.name} {portfolioData.personal.surname}. Designed for elite performance.
+                    </p>
+                </div>
+            </aside>
+        </>
     );
 };
 

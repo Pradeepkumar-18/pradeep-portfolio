@@ -20,24 +20,24 @@ const Experience = () => {
 
                 <div className="space-y-24 w-full">
                     {portfolioData.experience.map((exp, index) => (
-                        <div key={index} className="relative pl-12 border-l-2 border-primary/20 max-w-4xl">
+                        <div key={index} className="relative pl-8 md:pl-12 border-l-2 border-primary/20 max-w-4xl">
                             {/* Timeline Node */}
                             <div className="absolute -left-[9px] top-0 size-4 rounded-full bg-primary ring-8 ring-background/50"></div>
 
                             <motion.div
-                                className="mb-14"
+                                className="mb-10 md:mb-14"
                                 initial={{ opacity: 0, x: -10 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5 }}
                             >
-                                <div className="flex flex-wrap items-center justify-between gap-6 mb-4">
-                                    <h4 className="text-3xl font-black text-text-primary tracking-tight">{exp.company}</h4>
-                                    <span className="px-4 py-1.5 rounded-full bg-input-bg border border-border text-[10px] font-black text-text-muted uppercase tracking-widest shadow-xl">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 sm:gap-6 mb-4">
+                                    <h4 className="text-2xl md:text-3xl font-black text-text-primary tracking-tight">{exp.company}</h4>
+                                    <span className="self-start sm:self-auto px-4 py-1.5 rounded-full bg-input-bg border border-border text-[10px] font-black text-text-muted uppercase tracking-widest shadow-xl">
                                         {exp.duration}
                                     </span>
                                 </div>
-                                <div className="flex items-center gap-3 text-primary font-black uppercase tracking-widest text-[11px] mb-8">
+                                <div className="flex items-center gap-3 text-primary font-black uppercase tracking-widest text-[11px] mb-6 md:mb-8">
                                     <Briefcase size={16} />
                                     {exp.role}
                                 </div>

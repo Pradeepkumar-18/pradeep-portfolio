@@ -69,21 +69,21 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
 
 
                     <motion.h1
-                        className="text-5xl md:text-7xl lg:text-8xl font-black text-text-primary tracking-tighter leading-[0.85] flex flex-nowrap justify-center items-center gap-x-3 md:gap-x-4 group cursor-default whitespace-nowrap"
+                        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-text-primary tracking-tighter leading-[0.85] flex flex-wrap md:flex-nowrap justify-center items-center gap-x-3 md:gap-x-4 group cursor-default"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
                     >
-                        <span className="transition-transform duration-500 group-hover:translate-x-1">
+                        <span className="transition-transform duration-500 group-hover:translate-x-1 whitespace-nowrap">
                             {portfolioData.personal.name}
                         </span>
-                        <span className="text-primary italic opacity-90 transition-all duration-500 group-hover:scale-110">
+                        <span className="text-primary italic opacity-90 transition-all duration-500 group-hover:scale-110 whitespace-nowrap">
                             {portfolioData.personal.surname}
                         </span>
                     </motion.h1>
 
                     <motion.h2
-                        className="text-2xl md:text-4xl font-black text-text-primary tracking-tight mt-6"
+                        className="text-xl sm:text-2xl md:text-4xl font-black text-text-primary tracking-tight mt-6"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4 }}
@@ -94,7 +94,7 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
                     </motion.h2>
 
                     <motion.p
-                        className="text-lg md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mt-4 opacity-80"
+                        className="text-base md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mt-4 opacity-80"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
@@ -104,17 +104,17 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
                 </div>
 
                 <motion.div
-                    className="flex flex-wrap items-center justify-center gap-6 mt-6"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 mt-6 w-full sm:w-auto"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
                 >
-                    <a href={portfolioData.hero.actions[0].href} target="_blank" rel="noopener noreferrer" className="btn-dashboard-primary px-12 py-6 text-lg shadow-[0_0_30px_rgba(255,107,0,0.2)] hover:shadow-[0_0_40px_rgba(255,107,0,0.3)] transition-all">
+                    <a href={portfolioData.hero.actions[0].href} target="_blank" rel="noopener noreferrer" className="btn-dashboard-primary w-full sm:w-auto justify-center px-8 md:px-12 py-4 md:py-6 text-base md:text-lg shadow-[0_0_30px_rgba(255,107,0,0.2)] hover:shadow-[0_0_40px_rgba(255,107,0,0.3)] transition-all">
                         Get Resume
-                        <ExternalLink size={22} />
+                        <ExternalLink size={20} />
                     </a>
-                    <a href={`mailto:${portfolioData.contact.email}`} className="btn-dashboard-secondary px-12 py-6 text-lg">
-                        <Mail size={22} strokeWidth={2.5} />
+                    <a href={`mailto:${portfolioData.contact.email}`} className="btn-dashboard-secondary w-full sm:w-auto justify-center px-8 md:px-12 py-4 md:py-6 text-base md:text-lg">
+                        <Mail size={20} strokeWidth={2.5} />
                         Send Mail
                     </a>
                 </motion.div>

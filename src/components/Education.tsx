@@ -17,27 +17,27 @@ const Education = () => {
                     <h3 className="text-4xl md:text-5xl font-black text-text-primary leading-tight tracking-tight">Academic Foundation</h3>
                 </div>
 
-                <div className="grid grid-cols-1 gap-8 w-full max-w-3xl">
+                <div className="grid grid-cols-1 gap-6 md:gap-8 w-full max-w-3xl">
                     {portfolioData.education.map((edu, index) => (
                         <motion.div
                             key={index}
-                            className="glass-card p-10 hover:border-primary/30 transition-all flex flex-col md:flex-row items-start gap-8 group"
+                            className="glass-card p-6 sm:p-10 hover:border-primary/30 transition-all flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 md:gap-8 group"
                             initial={{ opacity: 0, y: 10 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
                         >
-                            <div className="size-16 bg-input-bg border border-border rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-110 transition-transform shadow-xl">
-                                <GraduationCap size={32} />
+                            <div className="size-14 md:size-16 bg-input-bg border border-border rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-110 transition-transform shadow-xl">
+                                <GraduationCap size={30} />
                             </div>
-                            <div className="space-y-4 flex-1 text-left">
-                                <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-4">
-                                    <h4 className="text-2xl font-black text-text-primary tracking-tight">{edu.degree}</h4>
+                            <div className="space-y-4 flex-1">
+                                <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                                    <h4 className="text-xl md:text-2xl font-black text-text-primary tracking-tight">{edu.degree}</h4>
                                     <span className="px-3 py-1 rounded-full bg-input-bg border border-border text-[10px] font-black text-text-muted uppercase tracking-widest shadow-lg">
                                         {edu.year}
                                     </span>
                                 </div>
-                                <p className="text-text-secondary text-lg font-medium">{edu.institution}</p>
+                                <p className="text-text-secondary text-base md:text-lg font-medium">{edu.institution}</p>
                                 {edu.score && (
                                     <div className="inline-block px-3 py-1 rounded bg-primary/10 border border-primary/20 text-[10px] font-black text-primary uppercase tracking-widest">
                                         Performance: {edu.score}
