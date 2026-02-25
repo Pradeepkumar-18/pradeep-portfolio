@@ -10,7 +10,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
         if (isZooming) return;
         setIsZooming(true);
         setTimeout(() => {
-            setActiveTab?.('experience');
+            setActiveTab?.('projects');
         }, 800);
     };
 
