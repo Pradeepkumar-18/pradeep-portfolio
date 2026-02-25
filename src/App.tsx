@@ -10,7 +10,7 @@ import Stats from './components/Stats';
 
 function App() {
   const [activeTab, setActiveTab] = useState('intro');
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     // Sync theme class with document element for global CSS variables and Tailwind dark mode
