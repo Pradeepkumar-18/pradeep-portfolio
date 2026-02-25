@@ -37,6 +37,27 @@ export const portfolioData = {
             "OCR & Automation",
             "Backend Development",
             "System Design"
+        ],
+        stats: [
+            { label: "Years Experience", value: "1" },
+            { label: "Projects", value: "3" },
+            { label: "Tech Stack", value: "12+" }
+        ],
+        recognitions: [
+            {
+                title: "BEST NEWCOMER Q4 2026",
+                awarder: "Skillmine Technology",
+                description: "Recognized for outstanding contribution and exceptional performance during the initial tenure.",
+                image: "/assets/award-trophy.png",
+                tags: ["BEST NEWCOMER", "EXCELLENCE"]
+            },
+            {
+                title: "INNOVATION AWARD Q3 2025",
+                awarder: "Skillmine Technology",
+                description: "Recognized for driving innovation through AI-powered solutions and process improvements.",
+                image: "/assets/award-trophy.png",
+                tags: ["INNOVATION", "AI SOLUTIONS"]
+            }
         ]
     },
 
@@ -48,7 +69,7 @@ export const portfolioData = {
             type: "Full-time",
             location: "Sivakasi",
             description:
-                "Working on AI-powered document management and compliance systems. Developed multiple Proof of Concept (POC) applications focused on automation, OCR extraction, and document intelligence.",
+                "Underwent intensive training and worked on software development modules. Gained hands-on experience with the company's tech stack and development workflows.",
             projects: [
                 {
                     title: "Document Management System (DMS)",
@@ -87,19 +108,6 @@ export const portfolioData = {
                         "Approval/Rejection Flow",
                         "Webhook Integration"
                     ]
-                },
-                {
-                    title: "Indian Oil Document Comparison (POC)",
-                    role: "POC Developer",
-                    description:
-                        "AI-driven solution for comparing two documents to identify differences, discrepancies, and inconsistencies. Used for agreements, contracts, and policy verification.",
-                    tech: ["React Vite", "NestJS", "MongoDB"],
-                    features: [
-                        "Automated Document Comparison",
-                        "Discrepancy & Error Detection",
-                        "Side-by-Side Diff View",
-                        "Contract Verification"
-                    ]
                 }
             ]
         },
@@ -110,7 +118,7 @@ export const portfolioData = {
             type: "Full-time",
             location: "Sivakasi",
             description:
-                "Completed comprehensive training in software development methodologies, learning the core technology stack and participating in initial project modules"
+                "Completed comprehensive training in software development methodologies, learning the core technology stack and participating in initial project modules."
         }
     ],
 

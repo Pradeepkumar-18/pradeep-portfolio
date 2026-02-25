@@ -37,9 +37,9 @@ function App() {
   const renderContent = () => {
     switch (activeTab) {
       case 'intro': return <Hero setActiveTab={setActiveTab} />;
-      case 'about': return <About />;
+      case 'about': return <About setActiveTab={setActiveTab} />;
       case 'experience':
-      case 'projects': return <Experience />;
+      case 'projects': return <Experience activeTab={activeTab} />;
       case 'skills': return <Skills />;
       case 'education': return <Education />;
       case 'contact': return <Contact setActiveTab={setActiveTab} />;

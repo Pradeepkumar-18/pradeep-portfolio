@@ -1,7 +1,6 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-
-@import "tailwindcss";
 
 :root {
     --background: #FFFFFF;
@@ -96,5 +95,34 @@
 
     .glass-card {
         @apply bg-card border border-border rounded-2xl backdrop-blur-sm transition-all duration-300;
+    }
+
+    .bento-grid {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 1.5rem;
+    }
+
+    .bento-card {
+        @apply bg-card border border-border/50 rounded-3xl p-8 transition-all duration-500 flex flex-col;
+    }
+
+    .bento-card:hover {
+        @apply border-primary/30;
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.03);
+    }
+
+    .bento-card-gradient {
+        background: linear-gradient(135deg,
+                var(--card) 0%,
+                var(--input-bg) 100%);
+    }
+
+    .text-balance {
+        text-wrap: balance;
+    }
+
+    .letter-spacing-tighter {
+        letter-spacing: -0.05em;
     }
 }
