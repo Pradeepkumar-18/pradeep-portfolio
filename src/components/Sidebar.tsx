@@ -65,7 +65,7 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isOpen, onCl
                             {portfolioData.personal.name.toLowerCase().split(" ")[0]}.dev
                         </span>
                     </div>
-                    <button onClick={onClose} className="p-2 -mr-2 text-text-muted hover:text-text-primary md:hidden">
+                    <button onClick={onClose} className="p-2 -mr-2 text-text-muted hover:text-text-primary md:hidden" aria-label="Close menu">
                         <X size={20} />
                     </button>
                 </div>

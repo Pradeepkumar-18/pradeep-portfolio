@@ -73,6 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ setActiveTab }) => {
                     <button
                         className="md:hidden text-slate-900"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
                     >
                         {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
