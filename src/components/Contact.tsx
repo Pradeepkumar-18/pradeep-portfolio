@@ -48,31 +48,35 @@ const Contact = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => 
 
                     <form className="glass-card p-10 space-y-8 shadow-2xl">
                         <div className="space-y-3">
-                            <label className="text-[10px] font-black uppercase tracking-widest text-text-muted flex items-center gap-2">
+                            <label htmlFor="full-name" className="text-[10px] font-black uppercase tracking-widest text-text-muted flex items-center gap-2">
                                 <span className="size-1 rounded-full bg-primary"></span>
                                 Full Name
                             </label>
                             <input
+                                id="full-name"
                                 className="w-full bg-input-bg/50 border border-border rounded-xl px-5 py-4 text-text-primary focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/5 transition-all placeholder:text-text-muted/30 text-sm"
                                 placeholder="E.g. John Doe"
                             />
                         </div>
                         <div className="space-y-3">
-                            <label className="text-[10px] font-black uppercase tracking-widest text-text-muted flex items-center gap-2">
+                            <label htmlFor="email" className="text-[10px] font-black uppercase tracking-widest text-text-muted flex items-center gap-2">
                                 <span className="size-1 rounded-full bg-primary"></span>
                                 Email Address
                             </label>
                             <input
+                                id="email"
+                                type="email"
                                 className="w-full bg-input-bg/50 border border-border rounded-xl px-5 py-4 text-text-primary focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/5 transition-all placeholder:text-text-muted/30 text-sm"
                                 placeholder="john@example.com"
                             />
                         </div>
                         <div className="space-y-3">
-                            <label className="text-[10px] font-black uppercase tracking-widest text-text-muted flex items-center gap-2">
+                            <label htmlFor="message" className="text-[10px] font-black uppercase tracking-widest text-text-muted flex items-center gap-2">
                                 <span className="size-1 rounded-full bg-primary"></span>
                                 Inquiry Details
                             </label>
                             <textarea
+                                id="message"
                                 className="w-full bg-input-bg/50 border border-border rounded-xl px-5 py-4 text-text-primary focus:outline-none focus:border-primary/50 focus:ring-4 focus:ring-primary/5 transition-all placeholder:text-text-muted/30 min-h-[140px] text-sm resize-none"
                                 placeholder="Describe the project or role requirements..."
                             ></textarea>

@@ -135,7 +135,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
                                 <div className="size-16 sm:size-20 shrink-0 rounded-2xl bg-input-bg/50 border border-border flex items-center justify-center p-3 relative group-hover:border-primary/20 transition-all">
                                     <img
                                         src={award.image}
-                                        alt="Award Trophy"
+                                        alt={`${award.title} awarded by ${award.awarder}`}
                                         className="w-full h-full object-contain relative z-10 drop-shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-500"
                                         onError={(e) => {
                                             (e.target as HTMLImageElement).src = "https://cdn-icons-png.flaticon.com/512/3112/3112946.png";
