@@ -6,7 +6,6 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import Stats from './components/Stats';
 
 function App() {
   const [activeTab, setActiveTab] = useState('intro');
@@ -42,8 +41,7 @@ function App() {
       case 'projects': return <Experience activeTab={activeTab} />;
       case 'skills': return <Skills />;
       case 'education': return <Education />;
-      case 'contact': return <Contact setActiveTab={setActiveTab} />;
-      case 'stats': return <Stats />;
+      case 'contact': return <Contact />;
       default: return <Hero />;
     }
   };

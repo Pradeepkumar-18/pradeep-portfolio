@@ -55,7 +55,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
     }, [setActiveTab, isZooming]);
 
     return (
-        <section className="dashboard-section relative overflow-hidden min-h-screen items-center text-center pb-10" id="about">
+        <section className="dashboard-section relative overflow-hidden pt-0 pb-40 text-center" id="about">
             {/* Background Glows to match Hero */}
             <div className="absolute inset-0 -z-10 h-full w-full pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] opacity-20" />

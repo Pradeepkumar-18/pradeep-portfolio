@@ -155,11 +155,13 @@ export const portfolioData = {
         {
             degree: "HSC - Tamil Nadu State Board",
             year: "2019 - 2020",
+            institution: "Kamarajar Hr Sec School, Sivakasi",
             score: "68%"
         },
         {
             degree: "SSLC - Tamil Nadu State Board",
             year: "2017 - 2018",
+            institution: "Kamarajar Hr Sec School, Sivakasi",
             score: "92%"
         }
     ],

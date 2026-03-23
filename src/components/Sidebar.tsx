@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
-import { LayoutDashboard, User, FolderKanban, Wrench, Briefcase, GraduationCap, Mail, BarChart3, ArrowUpRight, X } from 'lucide-react';
+import { LayoutDashboard, User, FolderKanban, Wrench, Briefcase, GraduationCap, Mail, ArrowUpRight, X } from 'lucide-react';
 import { portfolioData } from '../data/portfolioData';
 
 interface NavItemProps {
@@ -36,7 +36,6 @@ const Sidebar: React.FC<SidebarProps> = ({ activeTab, setActiveTab, isOpen, onCl
         { href: '#skills', icon: <Wrench size={18} />, label: "Skills & Tools", id: 'skills' },
         { href: '#education', icon: <GraduationCap size={18} />, label: "Education", id: 'education' },
         { href: '#contact', icon: <Mail size={18} />, label: "Contact", id: 'contact' },
-        { href: '#stats', icon: <BarChart3 size={18} />, label: "Stats", id: 'stats' },
     ];
 
     return (

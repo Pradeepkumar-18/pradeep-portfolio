@@ -2,7 +2,7 @@ import { jsxs, Fragment, jsx } from "react/jsx-runtime";
 import React, { useState, useEffect } from "react";
 import { renderToString } from "react-dom/server";
 import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
-import { ArrowUpRight, X, LayoutDashboard, User, FolderKanban, Briefcase, Wrench, GraduationCap, Mail, BarChart3, Command, Search, Clock, Moon, Sun, Github, ExternalLink, ArrowRight, Sparkles, Calendar, MapPin, Zap, Code2, Layout as Layout$1, CheckCircle2, Send, Cpu, Database, Globe } from "lucide-react";
+import { ArrowUpRight, X, LayoutDashboard, User, FolderKanban, Briefcase, Wrench, GraduationCap, Mail, BarChart3, Command, Search, Clock, Moon, Sun, Github, ExternalLink, ArrowRight, Sparkles, Calendar, MapPin, Zap, Code2, Layout as Layout$1, CheckCircle2, Award, Send, Cpu, Database, Globe } from "lucide-react";
 const portfolioData = {
   personal: {
     name: "Pradeep Kumar",
@@ -786,47 +786,115 @@ const Skills = () => {
   ) });
 };
 const Education = () => {
-  return /* @__PURE__ */ jsx("section", { className: "dashboard-section !items-start", id: "education", children: /* @__PURE__ */ jsxs(
-    motion.div,
-    {
-      className: "max-w-4xl space-y-16 flex flex-col items-start text-left",
-      initial: { opacity: 0, y: 20 },
-      whileInView: { opacity: 1, y: 0 },
-      viewport: { once: true },
-      transition: { duration: 0.6 },
-      children: [
-        /* @__PURE__ */ jsxs("div", { className: "space-y-6", children: [
-          /* @__PURE__ */ jsx("h2", { className: "text-[11px] font-black uppercase tracking-[0.3em] text-primary", children: "Education" }),
-          /* @__PURE__ */ jsx("h3", { className: "text-4xl md:text-5xl font-black text-text-primary leading-tight tracking-tight", children: "Academic Foundation" })
-        ] }),
-        /* @__PURE__ */ jsx("div", { className: "grid grid-cols-1 gap-6 md:gap-8 w-full max-w-3xl", children: portfolioData.education.map((edu, index) => /* @__PURE__ */ jsxs(
-          motion.div,
-          {
-            className: "glass-card p-6 sm:p-10 hover:border-primary/30 transition-all flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-6 md:gap-8 group",
-            initial: { opacity: 0, y: 10 },
-            whileInView: { opacity: 1, y: 0 },
-            viewport: { once: true },
-            transition: { duration: 0.5, delay: index * 0.1 },
-            children: [
-              /* @__PURE__ */ jsx("div", { className: "size-14 md:size-16 bg-input-bg border border-border rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:scale-110 transition-transform shadow-xl", children: /* @__PURE__ */ jsx(GraduationCap, { size: 30 }) }),
-              /* @__PURE__ */ jsxs("div", { className: "space-y-4 flex-1", children: [
-                /* @__PURE__ */ jsxs("div", { className: "flex flex-col md:flex-row items-center justify-between gap-4", children: [
-                  /* @__PURE__ */ jsx("h4", { className: "text-xl md:text-2xl font-black text-text-primary tracking-tight", children: edu.degree }),
-                  /* @__PURE__ */ jsx("span", { className: "px-3 py-1 rounded-full bg-input-bg border border-border text-[10px] font-black text-text-muted uppercase tracking-widest shadow-lg", children: edu.year })
-                ] }),
-                /* @__PURE__ */ jsx("p", { className: "text-text-secondary text-base md:text-lg font-medium", children: edu.institution }),
-                edu.score && /* @__PURE__ */ jsxs("div", { className: "inline-block px-3 py-1 rounded bg-primary/10 border border-primary/20 text-[10px] font-black text-primary uppercase tracking-widest", children: [
-                  "Performance: ",
-                  edu.score
-                ] })
-              ] })
-            ]
-          },
-          index
-        )) })
-      ]
-    }
-  ) });
+  return /* @__PURE__ */ jsxs("section", { className: "dashboard-section relative overflow-hidden py-24", id: "education", children: [
+    /* @__PURE__ */ jsxs("div", { className: "absolute inset-0 -z-10 pointer-events-none", children: [
+      /* @__PURE__ */ jsx("div", { className: "absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px]" }),
+      /* @__PURE__ */ jsx("div", { className: "absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-[100px]" })
+    ] }),
+    /* @__PURE__ */ jsxs(
+      motion.div,
+      {
+        className: "max-w-5xl mx-auto flex flex-col items-center text-center px-6",
+        initial: { opacity: 0 },
+        whileInView: { opacity: 1 },
+        viewport: { once: true },
+        transition: { duration: 0.8 },
+        children: [
+          /* @__PURE__ */ jsxs("div", { className: "space-y-4 mb-20 text-center", children: [
+            /* @__PURE__ */ jsxs(
+              motion.div,
+              {
+                className: "inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20",
+                initial: { opacity: 0, y: -10 },
+                whileInView: { opacity: 1, y: 0 },
+                viewport: { once: true },
+                children: [
+                  /* @__PURE__ */ jsx(GraduationCap, { size: 14, className: "text-primary" }),
+                  /* @__PURE__ */ jsx("span", { className: "text-[10px] font-black uppercase tracking-[0.2em] text-primary", children: "Academic Journey" })
+                ]
+              }
+            ),
+            /* @__PURE__ */ jsxs("h2", { className: "text-4xl md:text-6xl font-black text-text-primary leading-tight tracking-tighter", children: [
+              "Educational ",
+              /* @__PURE__ */ jsx("span", { className: "text-primary italic", children: "Milestones" })
+            ] }),
+            /* @__PURE__ */ jsx("p", { className: "text-text-secondary max-w-xl mx-auto text-base md:text-lg font-medium opacity-80", children: "Bridging theoretical foundations with practical engineering excellence." })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "relative w-full max-w-4xl", children: [
+            /* @__PURE__ */ jsx(
+              motion.div,
+              {
+                className: "absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-primary/50 via-primary/20 to-transparent hidden md:block",
+                initial: { height: 0 },
+                whileInView: { height: "100%" },
+                viewport: { once: true },
+                transition: { duration: 1.5, ease: "easeInOut" }
+              }
+            ),
+            /* @__PURE__ */ jsx("div", { className: "space-y-12 md:space-y-24 relative", children: portfolioData.education.map((edu, index) => /* @__PURE__ */ jsxs(
+              motion.div,
+              {
+                className: `flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`,
+                initial: { opacity: 0, y: 30 },
+                whileInView: { opacity: 1, y: 0 },
+                viewport: { once: true, margin: "-100px" },
+                transition: { duration: 0.6, delay: index * 0.1 },
+                children: [
+                  /* @__PURE__ */ jsx("div", { className: `w-full md:w-5/12 ${index % 2 === 0 ? "md:text-right" : "md:text-left"}`, children: /* @__PURE__ */ jsxs("div", { className: "glass-card p-6 md:p-8 hover:border-primary/40 transition-all group relative", children: [
+                    edu.score && /* @__PURE__ */ jsx("div", { className: `absolute -top-3 ${index % 2 === 0 ? "md:-right-3 md:left-auto left-4" : "md:-left-3 md:right-auto right-4"} px-3 py-1 rounded bg-primary text-[10px] font-black text-white uppercase tracking-widest shadow-lg shadow-primary/20 z-10`, children: edu.score }),
+                    /* @__PURE__ */ jsxs("div", { className: "space-y-4", children: [
+                      /* @__PURE__ */ jsxs("div", { className: "flex flex-col gap-1", children: [
+                        /* @__PURE__ */ jsx("h4", { className: "text-xl md:text-2xl font-black text-text-primary tracking-tight leading-tight group-hover:text-primary transition-colors", children: edu.degree }),
+                        /* @__PURE__ */ jsxs("div", { className: `flex items-center gap-2 text-text-muted text-xs font-bold uppercase tracking-wider ${index % 2 === 0 ? "md:justify-end justify-start" : "justify-start"}`, children: [
+                          /* @__PURE__ */ jsx(Calendar, { size: 12, className: "text-primary" }),
+                          edu.year
+                        ] })
+                      ] }),
+                      /* @__PURE__ */ jsx("div", { className: "h-[1px] w-12 bg-border group-hover:w-full transition-all duration-500 mx-auto md:mx-0 ${index % 2 === 0 ? 'md:ml-auto' : 'md:mr-auto'}" }),
+                      /* @__PURE__ */ jsxs("div", { className: `flex flex-col gap-2 ${index % 2 === 0 ? "md:items-end items-start" : "items-start"}`, children: [
+                        /* @__PURE__ */ jsx("p", { className: "text-text-secondary text-sm md:text-base font-semibold leading-relaxed", children: edu.institution }),
+                        edu.degree.includes("Engineering") && /* @__PURE__ */ jsxs("div", { className: "inline-flex items-center gap-2 text-[10px] font-bold text-text-muted uppercase", children: [
+                          /* @__PURE__ */ jsx(MapPin, { size: 10, className: "text-primary" }),
+                          "Anna University Affiliate"
+                        ] })
+                      ] })
+                    ] })
+                  ] }) }),
+                  /* @__PURE__ */ jsxs("div", { className: "relative z-10 hidden md:flex items-center justify-center", children: [
+                    /* @__PURE__ */ jsx(
+                      motion.div,
+                      {
+                        className: "size-12 rounded-full bg-background border-2 border-primary flex items-center justify-center text-primary shadow-[0_0_20px_rgba(255,107,0,0.2)] group-hover:scale-110 transition-transform",
+                        whileHover: { scale: 1.2, rotate: 10 },
+                        children: /* @__PURE__ */ jsx(GraduationCap, { size: 20 })
+                      }
+                    ),
+                    /* @__PURE__ */ jsx("div", { className: "absolute size-20 bg-primary/10 rounded-full blur-xl animate-pulse" })
+                  ] }),
+                  /* @__PURE__ */ jsx("div", { className: "hidden md:block md:w-5/12" })
+                ]
+              },
+              index
+            )) })
+          ] }),
+          /* @__PURE__ */ jsxs(
+            motion.div,
+            {
+              className: "mt-24 p-8 rounded-2xl border border-dashed border-border flex flex-col items-center gap-4 max-w-2xl",
+              initial: { opacity: 0, scale: 0.9 },
+              whileInView: { opacity: 1, scale: 1 },
+              viewport: { once: true },
+              children: [
+                /* @__PURE__ */ jsx(Award, { className: "text-primary size-8" }),
+                /* @__PURE__ */ jsx("p", { className: "text-text-primary text-sm md:text-base font-medium italic text-center", children: '"Education is the most powerful weapon which you can use to change the world."' }),
+                /* @__PURE__ */ jsx("span", { className: "text-[10px] font-black uppercase tracking-[0.2em] text-text-muted", children: "Nelson Mandela" })
+              ]
+            }
+          )
+        ]
+      }
+    )
+  ] });
 };
 const Contact = ({ setActiveTab }) => {
   return /* @__PURE__ */ jsx("section", { className: "dashboard-section !items-start", id: "contact", children: /* @__PURE__ */ jsxs(
