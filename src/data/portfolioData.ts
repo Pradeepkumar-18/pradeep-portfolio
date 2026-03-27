@@ -89,7 +89,7 @@ export const portfolioData = {
                     role: "POC Developer",
                     description:
                         "AI-powered solution for template-based compliance checking of legal documents. Extracts information from scanned documents to verify compliance against predefined templates.",
-                    tech: ["React Vite", "NestJS", "MongoDB", "Cognitive AI"],
+                    tech: ["React Vite", "NestJS", "MongoDB"],
                     features: [
                         "Automated Compliance Verification",
                         "Scanned Document Extraction",
@@ -137,7 +137,7 @@ export const portfolioData = {
         },
         {
             category: "AI & Automation",
-            items: ["Gemini AI", "LangChain", "OCR", "Document Parsing", "Cognitive AI", "Workflow Automation"]
+            items: ["Gemini AI", "LangChain", "OCR", "Document Parsing", "Workflow Automation"]
         },
         {
             category: "Programming",

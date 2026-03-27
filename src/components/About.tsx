@@ -55,7 +55,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
     }, [setActiveTab, isZooming]);
 
     return (
-        <section className="dashboard-section relative overflow-hidden pt-0 pb-40 text-center" id="about">
+        <section className="dashboard-section relative overflow-hidden pt-15 pb-10 text-center" id="about">
             {/* Background Glows to match Hero */}
             <div className="absolute inset-0 -z-10 h-full w-full pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] opacity-20" />
@@ -79,7 +79,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
                     </motion.h2>
 
                     <motion.div
-                        className="text-text-secondary leading-relaxed text-base md:text-xl max-w-3xl mx-auto opacity-80"
+                        className="text-text-secondary leading-relaxed text-base md:text-xl max-w-4xl mx-auto opacity-80"
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ delay: 0.4 }}
