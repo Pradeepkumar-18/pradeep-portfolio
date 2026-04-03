@@ -6,7 +6,7 @@ const Contact = () => {
     return (
         <section className="dashboard-section !items-center" id="contact">
             <motion.div
-                className="max-w-5xl space-y-12 flex flex-col items-center"
+                className="max-w-7xl space-y-12 flex flex-col items-center mx-auto"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

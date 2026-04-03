@@ -52,7 +52,7 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
     }, [setActiveTab, isZooming]);
 
     return (
-        <section id="intro" className="dashboard-section relative overflow-hidden pt-20">
+        <section id="intro" className="dashboard-section relative overflow-hidden min-h-[90vh] pt-20">
             {/* Optimized Background Glow */}
             <div className="absolute inset-0 -z-10 h-full w-full pointer-events-none">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] opacity-30" />
@@ -60,7 +60,7 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
             </div>
 
             <motion.div
-                className="flex flex-col items-center justify-center text-center gap-8 max-w-5xl px-6"
+                className="flex flex-col items-center justify-center text-center gap-8 max-w-[1400px] px-6 w-full mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
@@ -69,7 +69,7 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
 
 
                     <motion.h1
-                        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-text-primary tracking-tighter leading-[0.85] flex flex-wrap md:flex-nowrap justify-center items-center gap-x-3 md:gap-x-4 group cursor-default"
+                        className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl 2xl:text-[9rem] font-black text-text-primary tracking-tighter leading-none flex flex-wrap md:flex-nowrap justify-center items-baseline gap-x-3 md:gap-x-4 group cursor-default"
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, type: "spring", stiffness: 100 }}
@@ -89,12 +89,12 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
                         transition={{ delay: 0.4 }}
                     >
                         Coder by day,{" "}
-                        <span className="text-primary italic">problem-solver </span>
-                        {"  "}by night!
+                        <span className="text-primary italic">problem-solver</span>
+                        {" "}by night!
                     </motion.h2>
 
                     <motion.p
-                        className="text-base md:text-xl text-text-secondary max-w-2xl mx-auto leading-relaxed mt-4 opacity-80"
+                        className="text-base md:text-xl 2xl:text-2xl text-text-secondary max-w-4xl 2xl:max-w-6xl mx-auto leading-relaxed mt-4 opacity-80"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5 }}
@@ -111,7 +111,7 @@ const Hero = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
                 >
                     <a href={portfolioData.hero.actions[0].href} target="_blank" rel="noopener noreferrer" className="btn-dashboard-primary w-full sm:w-auto justify-center px-8 md:px-12 py-4 md:py-6 text-base md:text-lg shadow-[0_0_30px_rgba(255,107,0,0.2)] hover:shadow-[0_0_40px_rgba(255,107,0,0.3)] transition-all">
                         Get Resume
-                        <ExternalLink size={20} />
+                        <ExternalLink size={20} strokeWidth={2.5} />
                     </a>
                     <a href={`mailto:${portfolioData.contact.email}`} className="btn-dashboard-secondary w-full sm:w-auto justify-center px-8 md:px-12 py-4 md:py-6 text-base md:text-lg">
                         <Mail size={20} strokeWidth={2.5} />

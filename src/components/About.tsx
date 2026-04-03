@@ -62,7 +62,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
             </div>
 
             <motion.div
-                className="max-w-5xl space-y-16 flex flex-col items-center justify-center px-6"
+                className="max-w-7xl space-y-16 flex flex-col items-center justify-center px-6 mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
