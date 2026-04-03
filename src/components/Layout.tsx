@@ -45,7 +45,7 @@ const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTab, them
                 <Topbar theme={theme} toggleTheme={toggleTheme} onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
 
                 <main className="flex-1 relative">
-                    <div className="max-w-6xl mx-auto px-6 md:px-2">
+                    <div className="max-w-[1600px] mx-auto px-6 md:px-12">
                         {children}
                     </div>
                 </main>
