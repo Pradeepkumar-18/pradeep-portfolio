@@ -58,7 +58,7 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
         <section className="dashboard-section relative overflow-hidden pt-15 pb-10 text-center" id="about">
             {/* Background Glows to match Hero */}
             <div className="absolute inset-0 -z-10 h-full w-full pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] opacity-20" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px]  h-[500px] bg-primary/10 rounded-full blur-[100px] opacity-20" />
             </div>
 
             <motion.div
