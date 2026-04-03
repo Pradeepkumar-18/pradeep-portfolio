@@ -58,11 +58,11 @@ const About = ({ setActiveTab }: { setActiveTab?: (tab: string) => void }) => {
         <section className="dashboard-section relative overflow-hidden pt-15 pb-10 text-center" id="about">
             {/* Background Glows to match Hero */}
             <div className="absolute inset-0 -z-10 h-full w-full pointer-events-none">
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] opacity-20" />
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px]  h-[500px] bg-primary/10 rounded-full blur-[100px] opacity-20" />
             </div>
 
             <motion.div
-                className="max-w-7xl space-y-16 flex flex-col items-center justify-center px-6 mx-auto "
+                className="max-w-7xl space-y-16 flex flex-col items-center justify-center px-6 mx-auto"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
