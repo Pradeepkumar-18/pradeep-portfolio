@@ -1,0 +1,161 @@
+
+> portfolio@0.0.0 build:ssg
+> rimraf dist && vite-react-ssg build
+
+
+[vite-react-ssg] Build for client...
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 2144 modules transformed.
+[31m✗[39m Build failed in 7.49s
+
+[vite-react-ssg] An internal error occurred.
+[vite-react-ssg] Please report an issue, if none already exists: https://github.com/daydreamer-riri/vite-react-ssg/issues
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+[31mnode_modules/vite-react-ssg/dist/index.mjs (3:9): "useLinkClickHandler" is not exported by "__vite-optional-peer-dep:react-router-dom:vite-react-ssg:false", imported by "node_modules/vite-react-ssg/dist/index.mjs".[39m
+file: [36mC:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/index.mjs:3:9[39m
+[33m
+1: import { jsx } from 'react/jsx-runtime';
+2: import { HelmetProvider } from 'react-helmet-async';
+3: import { useLinkClickHandler, Link as Link$1, NavLink as NavLink$1, matchRoutes, createBrowserRouter, RouterProvider ...
+            ^
+4: import { r as render, h as hydrate, d as documentReady } from './shared/vite-react-ssg.DTTf7HZy.mjs';
+5: import { c as convertRoutesToDataRoutes, j as joinUrlSegments, w as withLeadingSlash, s as stripBase } from './shared...
+[39m
+    at getRollupError (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/parseAst.js:402:41)
+    at error (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/parseAst.js:398:42)
+    at Module.error (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:17040:16)
+    at Module.traceVariable (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:17452:29)
+    at ModuleScope.findVariable (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:15070:39)
+    at FunctionScope.findVariable (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at FunctionBodyScope.findVariable (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:5673:38)
+    at Identifier.bind (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:5447:40)
+    at CallExpression.bind (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:2829:23)
+    at CallExpression.bind (file:///C:/Users/Pradeep%20Kumar%20S/Downloads/Project/Portfolio/node_modules/rollup/dist/es/shared/node-entry.js:12179:15) {
+  binding: 'useLinkClickHandler',
+  code: 'MISSING_EXPORT',
+  exporter: '__vite-optional-peer-dep:react-router-dom:vite-react-ssg:false',
+  id: 'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/index.mjs',
+  url: 'https://rollupjs.org/troubleshooting/#error-name-is-not-exported-by-module',
+  pos: 103,
+  loc: {
+    column: 9,
+    file: 'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/index.mjs',
+    line: 3
+  },
+  frame: "1: import { jsx } from 'react/jsx-runtime';\n" +
+    "2: import { HelmetProvider } from 'react-helmet-async';\n" +
+    '3: import { useLinkClickHandler, Link as Link$1, NavLink as NavLink$1, matchRoutes, createBrowserRouter, RouterProvider ...\n' +
+    '            ^\n' +
+    "4: import { r as render, h as hydrate, d as documentReady } from './shared/vite-react-ssg.DTTf7HZy.mjs';\n" +
+    "5: import { c as convertRoutesToDataRoutes, j as joinUrlSegments, w as withLeadingSlash, s as stripBase } from './shared...",
+  watchFiles: [
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/index.html',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/main.tsx',
+    'C:\\Users\\Pradeep Kumar S\\Downloads\\Project\\Portfolio\\package.json',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react/jsx-runtime.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/App.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/index.css',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react/index.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/About.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Layout.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Hero.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Skills.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Experience.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Education.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Contact.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Stats.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react/cjs/react-jsx-runtime.production.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/node_modules/react-helmet-async/lib/index.module.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react-dom/index.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/shared/vite-react-ssg.DTTf7HZy.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/shared/vite-react-ssg.BhGKpaqQ.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/shared/vite-react-ssg.CoMLbIiW.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/vite-react-ssg/dist/shared/vite-react-ssg.C6pK7rvr.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react/cjs/react.production.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/shallowequal/index.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react-fast-compare/index.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/invariant/browser.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/prop-types/index.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react-dom/client.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/lucide-react/dist/esm/lucide-react.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/data/portfolioData.ts',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Sidebar.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Topbar.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/react-dom/cjs/react-dom.production.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/tailwindcss/index.css',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/build_log.txt',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/build_log_ssg.txt',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/eslint.config.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/package.json',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/postcss.config.js',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/public/favicon.svg',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/public/robots.txt',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/public/sitemap.xml',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/public/vite.svg',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/README.md',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/App.css',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/assets/react.svg',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/src/components/Navbar.tsx',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/tsconfig.app.json',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/tsconfig.json',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/tsconfig.node.json',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/vite.config.ts',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/LazyMotion/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/render/components/m/proxy.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/events/event-info.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/events/add-pointer-event.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/motion/features/animations.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/render/dom/utils/filter-props.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/use-composed-ref.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/use-unmount-effect.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/is-browser.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/render/dom/features-max.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/render/dom/features-min.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/use-force-update.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/motion-dom/dist/es/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/render/dom/features-animation.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/use-motion-value-event.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/scroll/use-element-scroll.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-motion-template.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/scroll/use-viewport-scroll.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-follow-value.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-motion-value.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-spring.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-time.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-velocity.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-scroll.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-will-change/WillChangeMotionValue.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-transform.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion-config.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/motion-utils/dist/es/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/value/use-will-change/index.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/animation/hooks/animation-controls.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/animation/hooks/use-animate.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/animation/hooks/use-animation.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/animation/hooks/use-animate-style.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence-data.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/events/use-dom-event.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/motion/utils/is-motion-component.mjs',
+    'C:/Users/Pradeep Kumar S/Downloads/Project/Portfolio/node_modules/framer-motion/dist/es/motion/utils/unwrap-motion-component.mjs',
+    ... 2040 more items
+  ],
+  Symbol(augmented): true
+}
+
+Node.js v24.11.0

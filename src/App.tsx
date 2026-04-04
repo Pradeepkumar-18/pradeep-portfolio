@@ -6,11 +6,10 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Education from './components/Education';
 import Contact from './components/Contact';
-import Stats from './components/Stats';
 
 function App() {
   const [activeTab, setActiveTab] = useState('intro');
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
   useEffect(() => {
     // Sync theme class with document element for global CSS variables and Tailwind dark mode
@@ -20,6 +19,11 @@ function App() {
       document.documentElement.classList.remove('dark');
     }
   }, [theme]);
+
+  // Reset scroll position on tab change
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [activeTab]);
 
   const toggleTheme = () => {
     setTheme(prev => {
@@ -32,13 +36,12 @@ function App() {
   const renderContent = () => {
     switch (activeTab) {
       case 'intro': return <Hero setActiveTab={setActiveTab} />;
-      case 'about': return <About />;
+      case 'about': return <About setActiveTab={setActiveTab} />;
       case 'experience':
-      case 'projects': return <Experience />;
+      case 'projects': return <Experience activeTab={activeTab} />;
       case 'skills': return <Skills />;
       case 'education': return <Education />;
-      case 'contact': return <Contact setActiveTab={setActiveTab} />;
-      case 'stats': return <Stats />;
+      case 'contact': return <Contact />;
       default: return <Hero />;
     }
   };

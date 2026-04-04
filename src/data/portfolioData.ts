@@ -14,7 +14,7 @@ export const portfolioData = {
             part1: "JUNIOR SOFTWARE DEVELOPER",
         },
         description:
-            "Junior Software Developer at Skillmine Technology with 1 year of experience in building AI-powered document processing and automation systems using React, NestJS, and MongoDB.",
+            "Junior Software Developer at Skillmine Technology with 1 year of experience building scalable full-stack web applications using React, NestJS, and MongoDB. Experienced in developing secure APIs, designing modular system architecture, and integrating AI to build scalable AI-powered enterprise applications and workflow automation platforms.",
         actions: [
             {
                 text: "CHECK LINKEDIN",
@@ -37,6 +37,27 @@ export const portfolioData = {
             "OCR & Automation",
             "Backend Development",
             "System Design"
+        ],
+        stats: [
+            { label: "Years Experience", value: "1" },
+            { label: "Projects", value: "3" },
+            { label: "Tech Stack", value: "12+" }
+        ],
+        recognitions: [
+            {
+                title: "BEST NEWCOMER Q4 2026",
+                awarder: "Skillmine Technology",
+                description: "Recognized for outstanding contribution and exceptional performance during the initial tenure.",
+                image: "/assets/award-trophy.png",
+                tags: ["BEST NEWCOMER", "EXCELLENCE"]
+            },
+            {
+                title: "INNOVATION AWARD Q3 2025",
+                awarder: "Skillmine Technology",
+                description: "Recognized for driving innovation through AI-powered solutions and process improvements.",
+                image: "/assets/award-trophy.png",
+                tags: ["INNOVATION", "AI SOLUTIONS"]
+            }
         ]
     },
 
@@ -48,7 +69,7 @@ export const portfolioData = {
             type: "Full-time",
             location: "Sivakasi",
             description:
-                "Working on AI-powered document management and compliance systems. Developed multiple Proof of Concept (POC) applications focused on automation, OCR extraction, and document intelligence.",
+                "Underwent intensive training and worked on software development modules. Gained hands-on experience with the company's tech stack and development workflows.",
             projects: [
                 {
                     title: "Document Management System (DMS)",
@@ -68,7 +89,7 @@ export const portfolioData = {
                     role: "POC Developer",
                     description:
                         "AI-powered solution for template-based compliance checking of legal documents. Extracts information from scanned documents to verify compliance against predefined templates.",
-                    tech: ["React Vite", "NestJS", "MongoDB", "Cognitive AI"],
+                    tech: ["React Vite", "NestJS", "MongoDB"],
                     features: [
                         "Automated Compliance Verification",
                         "Scanned Document Extraction",
@@ -87,19 +108,6 @@ export const portfolioData = {
                         "Approval/Rejection Flow",
                         "Webhook Integration"
                     ]
-                },
-                {
-                    title: "Indian Oil Document Comparison (POC)",
-                    role: "POC Developer",
-                    description:
-                        "AI-driven solution for comparing two documents to identify differences, discrepancies, and inconsistencies. Used for agreements, contracts, and policy verification.",
-                    tech: ["React Vite", "NestJS", "MongoDB"],
-                    features: [
-                        "Automated Document Comparison",
-                        "Discrepancy & Error Detection",
-                        "Side-by-Side Diff View",
-                        "Contract Verification"
-                    ]
                 }
             ]
         },
@@ -110,7 +118,7 @@ export const portfolioData = {
             type: "Full-time",
             location: "Sivakasi",
             description:
-                "Completed comprehensive training in software development methodologies, learning the core technology stack and participating in initial project modules"
+                "Completed comprehensive training in software development methodologies, learning the core technology stack and participating in initial project modules."
         }
     ],
 
@@ -129,7 +137,7 @@ export const portfolioData = {
         },
         {
             category: "AI & Automation",
-            items: ["Gemini AI", "LangChain", "OCR", "Document Parsing", "Cognitive AI", "Workflow Automation"]
+            items: ["Gemini AI", "LangChain", "OCR", "Document Parsing", "Workflow Automation"]
         },
         {
             category: "Programming",
@@ -147,11 +155,13 @@ export const portfolioData = {
         {
             degree: "HSC - Tamil Nadu State Board",
             year: "2019 - 2020",
+            institution: "Kamarajar Hr Sec School, Sivakasi",
             score: "68%"
         },
         {
             degree: "SSLC - Tamil Nadu State Board",
             year: "2017 - 2018",
+            institution: "Kamarajar Hr Sec School, Sivakasi",
             score: "92%"
         }
     ],
